@@ -1,0 +1,3 @@
+version: latest
+text: hello production
+port: 4567
