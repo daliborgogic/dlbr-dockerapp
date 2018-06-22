@@ -2,13 +2,13 @@
 
 > Make your Docker Compose applications reusable, and share them on Docker Hub
 
-```
+```bash
 $ docker-app render | docker-compose -f - up
 ```
 
 If you prefer you can create a standalone configuration file to store those settings. Let's create prod.yml with the following contents:
 
-```
+```yml
 version: 0.2.3
 text: hello production
 port: 4567
@@ -16,23 +16,22 @@ port: 4567
 
 You can then run using that configuration file like so:
 
-```
+```bash
 $ docker-app render -f prod.yml | docker-compose -f - up
-
 
 ```
 
 ## Installation
 
 ```bash
-wget https://github.com/docker/app/releases/download/v0.2.0/docker-app-linux.tar.gz
-tar xf docker-app-linux.tar.gz
-cp docker-app-linux /usr/local/bin/docker-app
+$ wget https://github.com/docker/app/releases/download/v0.2.0/docker-app-linux.tar.gz
+$ tar xf docker-app-linux.tar.gz
+$ cp docker-app-linux /usr/local/bin/docker-app
 ```
 
 ## Usage
 
-```
+```bash
 $ docker-app
 Docker App Packages
 
